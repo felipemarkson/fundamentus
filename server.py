@@ -23,7 +23,7 @@ def original():
         return jsonify(lista)
 
 
-@app.route("/table")
+@app.route("/tabela")
 def table():
     global lista, dia
     

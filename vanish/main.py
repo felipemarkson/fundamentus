@@ -32,7 +32,7 @@ def vanishData(data):
 
     for name in papel_name:
         papel = data[name]
-        papel.update({"cod": name})
+        papel.update({"papel": name})
         papel_list.append(papel)
 
     df = pd.DataFrame(papel_list) 
