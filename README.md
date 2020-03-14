@@ -59,7 +59,7 @@ res = requests.get(localhost+"tabela")
 data_json = json.loads(req.content)
 df = pd.DataFrame(data_json)
 ```
-Na resposta da API baseada em tabelas o nome do papel é mais atributo.
+Na resposta da API baseada em tabelas o nome do papel é mais um atributo.
 
 
 
