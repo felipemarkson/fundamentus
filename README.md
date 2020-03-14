@@ -4,12 +4,22 @@ principais indicadores fundamentalistas em formato JSON.
 A API utiliza o microframework Flask.
 Também é possível utilizar via linha de comando.
 
-# Linha de comando
+# Instalação
+    $ poetry install
+
+# Linha de comando (Original)
     $ python3 fundamentus.py
 
 # API
-Execute o server.py e conecte no endereço (ex.: http://127.0.0.1:5000/) com seu browser
+    $ python3 server.py
+
+Endpoints (GET):
+
+    * /original : retorna os dados não tratados da API [original](https://github.com/phoemur/fundamentus)
+
+    * /table: retorna um JSON preparado para tratamento utilizando Pandas, através do comando:  $ pandas.DataFrame()
 
 # Requirements
-    Flask
-    lxml
+    Poetry (https://python-poetry.org/)
+
+
