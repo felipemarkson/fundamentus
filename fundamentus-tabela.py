@@ -103,6 +103,7 @@ if __name__ == '__main__':
     THE_BAR = WaitingBar('[*] Downloading...')
     lista = get_data()
     THE_BAR.stop()
+    pd.set_option('display.max_rows', lista.shape[0]+1)
     print(lista)
     
     # print('{0:<7} {1:<7} {2:<10} {3:<7} {4:<10} {5:<7} {6:<10} {7:<10} {8:<10} {9:<11} {10:<11} {11:<7} {12:<11} {13:<14} {14:<7}'.format('Papel',
