@@ -12,7 +12,7 @@ Para lidar com Pandas, utilizar a API baseada em tabelas.
 
 ## Requisitos
 
-[Python 3.7 +](https://www.python.org/)
+[Python 3](https://www.python.org/)
 
 [Poetry](http://python-poetry.org/)
 
@@ -24,11 +24,11 @@ Para lidar com Pandas, utilizar a API baseada em tabelas.
 
 ### Original
 
-$ python3 fundamentus.py
+    $ python3 fundamentus.py
 
 ### Tabela
 
-$ python3 fundamentus-tabela.py
+    $ python3 fundamentus-tabela.py
 
 
 ## API
@@ -36,13 +36,15 @@ $ python3 fundamentus-tabela.py
 
 ### Endpoints (GET):
 
-* original : retorna os dados não tratados da API [original](https://github.com/phoemur/fundamentus)
+* original : retorna os dados não tratados da API [original](https://github.com/phoemur/fundamentus). A resposta trará cada papel como um objeto e indicadores como propriedades de cada objeto. Os valores não estão tratados para uso direto em python.
 
-* tabela: retorna um JSON preparado para tratamento utilizando Pandas, através do comando: [pandas.DataFrame()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) Ex:
+* tabela: retorna um JSON preparado para tratamento utilizando Pandas. Os valores estão tratados para uso direto em python com [pandas.DataFrame()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) Ex:
 
 ```python
 import requests
+import json
 import pandas as pd
+
 localhost =  "http://127.0.0.1:5000/"
 res = requests.get(localhost+"tabela")
 data_json = json.loads(req.content)
