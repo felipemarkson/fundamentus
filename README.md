@@ -17,7 +17,8 @@ Endpoints (GET):
 
     * /original : retorna os dados não tratados da API [original](https://github.com/phoemur/fundamentus)
 
-    * /table: retorna um JSON preparado para tratamento utilizando Pandas, através do comando:  $ pandas.DataFrame()
+    * /table: retorna um JSON preparado para tratamento utilizando Pandas, através do comando: 
+         $ pandas.DataFrame()
 
 # Requirements
     Poetry (https://python-poetry.org/)
