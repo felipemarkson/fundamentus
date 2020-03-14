@@ -36,7 +36,16 @@ Para lidar com Pandas, utilizar a API baseada em tabelas.
 
 ### Endpoints (GET):
 
-* original : retorna os dados não tratados da API [original](https://github.com/phoemur/fundamentus). A resposta trará cada papel como um objeto e indicadores como propriedades de cada objeto. Os valores não estão tratados para uso direto em python.
+* original : retorna os dados não tratados da API [original](https://github.com/phoemur/fundamentus). A resposta trará cada papel como um objeto e indicadores como propriedades de cada objeto. Os valores não estão tratados para uso direto em python. Ex:
+
+```json
+  "BRFS3": {
+    "Cresc.5a": "2,36",
+    "DY": "0,00%",
+    "ROIC": "1,13",
+    "cotacao": "16,49"
+  }
+```
 
 * tabela: retorna um JSON preparado para tratamento utilizando Pandas. Os valores estão tratados para uso direto em python com [pandas.DataFrame()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) Ex:
 
@@ -50,7 +59,8 @@ res = requests.get(localhost+"tabela")
 data_json = json.loads(req.content)
 df = pd.DataFrame(data_json)
 ```
-    
+Na resposta da API baseada em tabelas o nome do papel é mais atributo.
+
 
 
 
