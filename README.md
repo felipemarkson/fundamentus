@@ -13,13 +13,19 @@ Para lidar com Pandas, utilizar a API baseada em tabelas.
 [Poetry](http://python-poetry.org/)
 
 ## Instalação
+
     $ poetry install
 
 ## Linha de comando
-    ### Original
-        $ python3 fundamentus.py
-    ### Tabela
-        $ python3 fundamentus-tabela.py
+
+### Original
+
+$ python3 fundamentus.py
+
+### Tabela
+
+$ python3 fundamentus-tabela.py
+
 
 ## API
     $ python3 server.py
